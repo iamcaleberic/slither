@@ -20,3 +20,22 @@ var canvas = document.querySelector("#canvas");
 	}
 	
 	
+	function reset(){
+		score = 0
+
+		snake = {
+			direction: 'right',
+			body: [
+
+				{x: 3 , y: 0},
+				{x: 2 , y: 0},
+				{x: 1 , y: 0},
+				{x: 0 , y: 0}
+			]
+		}
+
+		food = {
+			x: random(0, BOARD_SIZE),
+			y: random(0, BOARD_SIZE),
+		}
+	}
