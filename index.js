@@ -65,6 +65,17 @@ var canvas = document.querySelector("#canvas");
 				y: random(0, BOARD_SIZE),
 			}
 		}else{
-			
+			snake.body.pop()
 		}
+
+		// if nigga collided
+
+		if (collision()){
+			reset()
+		}else{
+			snake.body.unshift(snake.head)
+		}
+
+		render()
+		setTimeout(tick , 100 - score * 5)
 	}
