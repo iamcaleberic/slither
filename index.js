@@ -1,8 +1,8 @@
 "use strict";
 
-var canvas = document.querySelector("#canvas");
-var ctx = canvas.getContext('2d');
-BOARD_SIZE =  25
+var canvas = document.querySelector("#canvas"),
+			ctx = canvas.getContext('2d'),
+			BOARD_SIZE =  25
 
 canvas.width =  window.innerWidth - 20
 canvas.height = window.innerHeight - 20
@@ -47,10 +47,10 @@ function tick(){
 	}
 
 
-	if (snake,direction ==  "right")  snake.head.x++
-	else if (snake,direction ==  "left")  snake.head.x--
-	else if (snake,direction ==  "down")  snake.head.y++
-	else if (snake,direction ==  "up")  snake.head.y--
+	if (snake.direction ==  "right")  snake.head.x++
+	else if (snake.direction ==  "left")  snake.head.x--
+	else if (snake.direction ==  "down")  snake.head.y++
+	else if (snake.direction ==  "up")  snake.head.y--
 
 
 	// food check
@@ -83,8 +83,9 @@ function tick(){
 function collision() {
 	return(
 		snake.head.x < 0 || 
-		snake.head.x >|| BOARD_SIZE ||
+		snake.head.x >= BOARD_SIZE ||
 		snake.head.y < 0 ||
+		snake.head.y >= BOARD_SIZE ||
 		snake.body.some(function (cell) {
 			return(cell.x ==  snake.head.x && cell.y == snake.head.y)
 		})
@@ -122,3 +123,6 @@ document.addEventListener('keydown' , function (e) {
 
 
 })
+
+reset()
+tick()
