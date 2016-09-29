@@ -1,0 +1,15 @@
+{
+    "name" : "slither",
+    "version": "0.1.0",
+    "description": "slither game" ,
+    "author": {
+        "email": "iamcaleb@tuta.io",
+        "name": "Eric Caleb",
+        "url": "iamcaleberic.github.io"
+    },
+    "license": "MIT",
+    "repository":"github.com/iamcaleberic/slither",
+   "dependencies": {
+       "gulp": "*"
+   }
+}
