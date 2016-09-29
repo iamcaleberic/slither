@@ -11,7 +11,12 @@ var canvas = document.querySelector("#canvas");
 	var cw = canvas.width / BOARD_SIZE,
 			 		ch = canvas.height/ BOARD_SIZE
 
-		
 
+	var snake, food , score , high_score = 0
+
+
+	function random(min , max){
+		return Math.floor(Math.random() * (max - min) + min)
+	}
 	
 	
