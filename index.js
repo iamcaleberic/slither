@@ -39,3 +39,17 @@ var canvas = document.querySelector("#canvas");
 			y: random(0, BOARD_SIZE),
 		}
 	}
+
+	function tick(){
+		snake.head = {
+			x: snake.body[0].x,
+			y: snake.body[0].y
+		}
+
+
+		if (snake,direction ==  "right")  snake.head.x++
+		else if (snake,direction ==  "left")  snake.head.x--
+		else if (snake,direction ==  "down")  snake.head.y++
+		else if (snake,direction ==  "up")  snake.head.y--
+
+	}
