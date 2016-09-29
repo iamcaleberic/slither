@@ -52,4 +52,19 @@ var canvas = document.querySelector("#canvas");
 		else if (snake,direction ==  "down")  snake.head.y++
 		else if (snake,direction ==  "up")  snake.head.y--
 
+
+		// food check
+
+		if (snake.head.x == food.x && snake.head.y == food.y){
+			score++
+
+			if(score > high_score) high_score = score
+
+			food = {
+				x: random(0 , BOARD_SIZE),
+				y: random(0, BOARD_SIZE),
+			}
+		}else{
+			
+		}
 	}
