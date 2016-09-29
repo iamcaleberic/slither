@@ -106,3 +106,10 @@ function render() {
 	ctx.fillText("Score:" + score , 10, 20)
 	ctx.fillText("High Score:" + high_score, 10, 45 )
 }
+
+function paint_cell(cell ,color){
+	ctx.fillStyle = color
+	ctx.fillRect(cell.x * cw , cell.y * ch ,cw ,ch)
+	ctx.strokeStyle = "white"
+	ctx.strokeRect( cell.x * cw , cell.y * ch , cw, ch)
+}
