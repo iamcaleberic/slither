@@ -79,3 +79,15 @@ var canvas = document.querySelector("#canvas");
 		render()
 		setTimeout(tick , 100 - score * 5)
 	}
+
+	function collision() {
+		return(
+			snake.head.x < 0 || 
+			snake.head.x >|| BOARD_SIZE ||
+			snake.head.y < 0 ||
+			snake.body.some(function (cell) {
+				return(cell.x ==  snake.head.x && cell.y == snake.head.y)
+			})
+
+			)
+	}
