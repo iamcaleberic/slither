@@ -113,3 +113,12 @@ function paint_cell(cell ,color){
 	ctx.strokeStyle = "white"
 	ctx.strokeRect( cell.x * cw , cell.y * ch , cw, ch)
 }
+
+document.addEventListener('keydown' , function (e) {
+	if (e.key == "ArrowLeft") snake.direction = "left"
+	else if (e.key == "ArrowUp") snake.direction = "up"
+	else if (e.key == "ArrowRight") snake.direction = "right"
+	else if (e.key == "ArrowDown") snake.direction = "down"
+
+
+})
