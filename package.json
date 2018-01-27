@@ -11,5 +11,8 @@
     "repository":"github.com/iamcaleberic/slither",
    "dependencies": {
        "gulp": "*"
+   },
+   "scripts": {
+     "slither": "node ghost"
    }
 }
