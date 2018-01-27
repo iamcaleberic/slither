@@ -1,17 +1,19 @@
 # slither
 JavaScript Canvas slither game
-> * Make sure you have ```npm``` ```node```  installed
 
-###running 
+### Requirements
+- Yarn
+- Node(8+)
 
- Run ```npm install``` to install dependencies
- 
- Make sure you are in root directory 
- 
- Run ```node ghost ``` to serve
- 
+###running
+
+ Run ```yarn install``` to install dependencies
+
+ Make sure you are in root directory
+
+ Run ```yarn slither ``` to serve
+
  Open your browser on http://localhost:7000
- 
- 
+
+
  - More on ghost https://github.com/shadowscript/ghost
- 
