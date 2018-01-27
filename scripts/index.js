@@ -1,15 +1,15 @@
 "use strict";
-
+// basic html selector
 var canvas = document.querySelector("#canvas"),
-			ctx = canvas.getContext('2d'),
+			ctx = canvas.getContext('2d'), // get context in 2D get 3D using webGL and the likes
 			BOARD_SIZE =  25
 
 canvas.width =  window.innerWidth - 20
 canvas.height = window.innerHeight - 20
-ctx.font = "20px veranda"
+ctx.font = "15px roboto"
 
 var cw = canvas.width / BOARD_SIZE,
-		 		ch = canvas.height/ BOARD_SIZE
+		ch = canvas.height/ BOARD_SIZE
 
 
 var snake, food , score , high_score = 0
@@ -64,7 +64,7 @@ function tick(){
 			x: random(0 , BOARD_SIZE),
 			y: random(0, BOARD_SIZE),
 		}
-	}else{
+	} else {
 		snake.body.pop()
 	}
 
@@ -72,7 +72,7 @@ function tick(){
 
 	if (collision()){
 		reset()
-	}else{
+	} else {
 		snake.body.unshift(snake.head)
 	}
 
@@ -82,7 +82,7 @@ function tick(){
 
 function collision() {
 	return(
-		snake.head.x < 0 || 
+		snake.head.x < 0 ||
 		snake.head.x >= BOARD_SIZE ||
 		snake.head.y < 0 ||
 		snake.head.y >= BOARD_SIZE ||
@@ -104,8 +104,8 @@ function render() {
 	paint_cell(food, "red")
 
 	ctx.fillStyle = "white"
-	ctx.fillText("Score:" + score , 10, 20)
-	ctx.fillText("High Score:" + high_score, 10, 45 )
+	ctx.fillText("Score: " + score , 10, 20)
+	ctx.fillText("High Score: " + high_score, 10, 45 )
 }
 
 function paint_cell(cell ,color){
@@ -120,7 +120,6 @@ document.addEventListener('keydown' , function (e) {
 	else if (e.key == "ArrowUp") snake.direction = "up"
 	else if (e.key == "ArrowRight") snake.direction = "right"
 	else if (e.key == "ArrowDown") snake.direction = "down"
-
 
 })
 
